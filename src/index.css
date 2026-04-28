@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --color-primary-fixed: #d4af37;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #000000;
+  --color-secondary-container: #8b8b8b;
+  --color-surface-container: #0c0c0c;
+  --color-surface-container-low: #080808;
+  --color-surface-container-high: #1a1a1a;
+  --color-surface-container-highest: #262626;
+  --color-on-surface: #e0d8d0;
+  --color-on-surface-variant: #8b8b8b;
+  --color-background: #050505;
+  --color-surface: #050505;
+  
+  --radius-2xl: 1rem;
+
+  --spacing-unit: 8px;
+  --spacing-margin-page: 20px;
+  --spacing-gutter: 24px;
+  --spacing-stack-sm: 16px;
+  --spacing-stack-md: 24px;
+  --spacing-stack-lg: 48px;
+  --spacing-section-gap: 64px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --spacing-margin-page: 48px;
+    --spacing-stack-lg: 64px;
+    --spacing-section-gap: 96px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tonal-layer {
+  background: radial-gradient(at top left, #111111 0%, #050505 100%);
+}
+
+.gold-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.4);
+}
